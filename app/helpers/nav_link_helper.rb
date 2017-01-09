@@ -78,7 +78,7 @@ module NavLinkHelper
     end
 
     def segment_for(controller, path)
-      if @options[:controller_segment]
+      if controller && @options[:controller_segment]
         controller.split('/')[segment_position]
       elsif @options[:url_segment]
         path.split('/')[segment_position]
